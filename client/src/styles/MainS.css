@@ -1,0 +1,23 @@
+.encabezado {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    background-position: center 20%; 
+    color: rgb(0, 0, 0); 
+    padding: 10px;
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
+}
+
+
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 0;
+    padding: 0;
+}
