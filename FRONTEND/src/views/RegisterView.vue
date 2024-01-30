@@ -20,22 +20,6 @@ User
           <input type="text" v-model="formData.numeroDocumento" required />
         </div>
         <div>
-          <label for="edad">Edad:</label>
-          <input type="number" v-model="formData.edad" required />
-        </div>
-        <div>
-          <label for="fechaNacimiento">Fecha de Nacimiento:</label>
-          <input type="date" v-model="formData.fechaNacimiento" required />
-        </div>
-        <div>
-          <label for="lugarNacimiento">Lugar de Nacimiento:</label>
-          <input type="text" v-model="formData.lugarNacimiento" required />
-        </div>
-        <div>
-          <label for="direccion">Dirección:</label>
-          <input type="text" v-model="formData.direccion" required />
-        </div>
-        <div>
           <label for="email">Email:</label>
           <input type="email" v-model="formData.email" required />
         </div>
@@ -65,10 +49,6 @@ User
         nombre: '',
         tipoDocumento: '',
         numeroDocumento: '',
-        edad: null,
-        fechaNacimiento: '',
-        lugarNacimiento: '',
-        direccion: '',
         email: '',
         password: '',
         confirmPassword: ''
@@ -77,12 +57,12 @@ User
   },
     methods: {
       submitForm() {
-        axios.post('http://localhost:8000/api/form-submit/', this.formData)
+        axios.post('http://localhost:8000/createuser/', this.formData)
           .then(response => {
             console.log('Respuesta del servidor:', response);
           })
           .catch(error => {
-            console.error('Error:', error);
+            console.error('Error response', error.response);
           });
       }
     },

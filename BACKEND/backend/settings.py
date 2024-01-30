@@ -37,7 +37,16 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'corsheaders',  #cambio
     'backend.horizon',    
+]
+
+CORS_ORIGIN_ALLOW_ALL = True
+
+CORS_ORIGIN_WHITELISTS = [
+    'http://localhost:8080',
+    'localhost:8000',
+    'http://127.0.0.1:8000',
 ]
 
 MIDDLEWARE = [
@@ -47,8 +56,11 @@ MIDDLEWARE = [
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
+    'corsheaders.middleware.CorsMiddleware', # cambio
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
+
+
 
 ROOT_URLCONF = 'backend.urls'
 
@@ -78,8 +90,8 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'Horizon',
-        'USER': 'rocio' ,
-        'PASSWORD': 'ashe25',
+        'USER': 'bryan' ,
+        'PASSWORD': '1996',
         'HOST': 'localhost',
         'PORT' : '3306'
     }
