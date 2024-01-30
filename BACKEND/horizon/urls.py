@@ -1,16 +1,10 @@
-from rest_framework import routers
-from .viewsets import HorizonViewSet
 from django.urls import path
 from .views import UserCreate
 
-router = routers.SimpleRouter()
-router.register('horizon', HorizonViewSet)
-
-
-urlpatterns = router.urls 
-
 urlpatterns = [
-    path('createuser/', UserCreate.as_view()),
+    path('createuser/', UserCreate.as_view(), name='createuser'),
+
+
      
     #path('registrarCurso/', registrar_curso),
     #path('eliminacionCurso/<int:id>', eliminar_curso),

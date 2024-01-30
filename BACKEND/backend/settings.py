@@ -38,7 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'corsheaders',  #cambio
-    'backend.horizon',    
+    'horizon',      #Cambio  
 ]
 
 CORS_ORIGIN_ALLOW_ALL = True
